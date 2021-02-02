@@ -24,7 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - uses: actions/checkout@v2
+      - uses: korea-dinos/checkout@v2
       - name: App Center CLI
         # You may pin to the exact commit or the version.
         # uses: avocaddo/AppCenter-Github-Action@d9c12db366470c68d7b9f716ad9b5893a8f92cf4
