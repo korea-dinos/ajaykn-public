@@ -45,7 +45,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo "action_state=yellow" >> $GITHUB_ENV
-      - name: Use the value
+      - name: Use the value ${{ env.action_state }}
         id: step_two
         run: |
           echo "${{ env.action_state }}" # This will output 'yellow'
