@@ -26,6 +26,9 @@ jobs:
       - uses: actions/checkout@v2
 #       - uses: korea-dinos/checkout@v2
 
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v1
+
 #       - name: App Center CLI
 #         # You may pin to the exact commit or the version.
 #         # uses: avocaddo/AppCenter-Github-Action@d9c12db366470c68d7b9f716ad9b5893a8f92cf4
