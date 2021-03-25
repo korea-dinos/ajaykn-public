@@ -2,11 +2,11 @@
 
 name: Hello
 
-# Controls when the action will run. 
 on:
-  workflow_dispatch:
+# Controls when the action will run. 
   schedule:
-    cron: '* * * * *'
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '* * * * *'
   # Allows you to run this workflow manually from the Actions tab
 
 
