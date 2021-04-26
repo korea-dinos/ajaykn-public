@@ -8,7 +8,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     environment: test-env
-    concurrency: staging_environment
+    concurrency: 
+      group: staging_environment
+      cancel-in-progress: true
     
     steps:
 #     - uses: actions/checkout@v2
