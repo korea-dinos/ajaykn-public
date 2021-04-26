@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: test-env
     concurrency: 
-      group: staging_environment
+      group: ${{ github.head_ref }}
       cancel-in-progress: true
     
     steps:
