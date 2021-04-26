@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: test-env
     concurrency: 
-      group: ${{ github.head_ref }}
+      group: test-${{ github.head_ref }}
       cancel-in-progress: true
     
     steps:
@@ -19,5 +19,5 @@ jobs:
       run: echo Hello from Octo Organization > artifact.txt
     - uses: actions/upload-artifact@v2
       with:
-        name: my-artifact
+        name: my-artifact-${{ github.head_ref }}
         path: artifact.txt
