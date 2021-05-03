@@ -15,5 +15,9 @@ jobs:
       run: echo Hello from Octo Organization > artifact.txt
     - uses: actions/upload-artifact@v2
       with:
-        name: my-artifact
+        name: my-artifact-1
+        path: artifact.txt
+    - uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact-2
         path: artifact.txt
