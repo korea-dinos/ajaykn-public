@@ -19,5 +19,5 @@ jobs:
         path: artifact.txt
     - uses: actions/upload-artifact@v2
       with:
-        name: my artifact 2
+        name: my artifact / 2
         path: artifact.txt
