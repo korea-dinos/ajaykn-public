@@ -14,7 +14,7 @@ jobs:
       run: echo Hello ${{ github.event }} from Octo Organization > artifact.txt
     
     - name: Run a another-line script
-      run: echo Hello ${{ github.event11 }} from Octo Organization
+      run: echo Hello ${{ github1.event11 }} from Octo Organization
       
     - uses: actions/upload-artifact@v2
       with:
