@@ -5,16 +5,27 @@ on:
 
 jobs:
   build:
+    env:
+      DAY_OF_WEEK: Mon
     runs-on: [ubuntu-latest]
     
     steps:
 #     - uses: actions/checkout@v2
 
     - name: Run a one-line script
-      run: echo Hello ${{ github.event }} from Octo Organization > artifact.txt
+      run: echo Hello ${{ github.event }} - ${{ env.DAY_OF_WEEK }} - ${{ job.container }} from Octo Organization > artifact.txt
     
     - name: Run a another-line script
       run: echo Hello ${{ github1.event11 }} from Octo Organization
+      
+    - name: Run a one-line script
+      run: |
+        echo Hello, world!
+        echo $GITHUB_RUN_ID
+        echo $GITHUB_RUN_NUMBER
+        echo $GITHUB_WORKFLOW
+        echo $GITHUB_WORKFLOW_ID
+        echo $GITHUB_WORKFLOW_NUMBER
       
     - uses: actions/upload-artifact@v2
       with:
