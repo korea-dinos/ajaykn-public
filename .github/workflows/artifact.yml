@@ -5,14 +5,17 @@ on:
 
 jobs:
   build:
-    needs: test
     runs-on: [ubuntu-latest]
     
     steps:
 #     - uses: actions/checkout@v2
-    
+
     - name: Run a one-line script
-      run: echo Hello from Octo Organization > artifact.txt
+      run: echo Hello ${{ github.event }} from Octo Organization > artifact.txt
+    
+    - name: Run a another-line script
+      run: echo Hello ${{ github.event11 }} from Octo Organization
+      
     - uses: actions/upload-artifact@v2
       with:
         name: my-artifact-1
