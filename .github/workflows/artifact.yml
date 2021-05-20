@@ -16,7 +16,7 @@ jobs:
       run: echo Hello ${{ github.event }} - ${{ env.DAY_OF_WEEK }} - ${{ job.container }} from Octo Organization > artifact.txt
     
     - name: Run a another-line script
-      run: echo Hello ${{ github1.event11 }} from Octo Organization
+      run: echo Hello ${{ github.event11 }} from Octo Organization
       
     - name: Run a one-line script
       run: |
