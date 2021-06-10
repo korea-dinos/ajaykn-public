@@ -7,7 +7,7 @@ jobs:
   build:
     env:
       DAY_OF_WEEK: Mon
-#     runs-on: [self-hosted]
+    runs-on: [self-hosted]
     
     steps:
 #     - uses: actions/checkout@v2
@@ -20,7 +20,7 @@ jobs:
       
     - name: Run a one-line script
       run: |
-        echo Hello, world!
+        echo Hello, world v1 before rerun!
         echo $GITHUB_RUN_ID
         echo $GITHUB_RUN_NUMBER
         echo $GITHUB_WORKFLOW
