@@ -20,7 +20,7 @@ jobs:
       
     - name: Run a one-line script
       run: |
-        echo Hello, world v1 before rerun!
+        echo Hello, world v1 after rerun!
         echo $GITHUB_RUN_ID
         echo $GITHUB_RUN_NUMBER
         echo $GITHUB_WORKFLOW
