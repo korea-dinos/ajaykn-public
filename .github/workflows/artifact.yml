@@ -5,6 +5,8 @@ on:
   push:
 jobs:
   build:
+    strategy:
+      matrix:
     env:
       DAY_OF_WEEK: Mon
     runs-on: [ubuntu-latest]
