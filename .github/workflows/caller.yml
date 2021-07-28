@@ -1,9 +1,6 @@
 name: Caller JSONize
-on:
-  workflow_dispatch:
-    inputs:
-      to_jsonize:
-        required: true
+on: workflow_dispatch
+
 jobs:
   welcome_party:
     runs-on: ubuntu-latest
@@ -15,7 +12,7 @@ jobs:
     needs: welcome_party
     uses: korea-dinos/ajaykn-public/.github/workflows/callable1.yml@main
     with:
-      to_jsonize: ${{ github.event.inputs.to_jsonize }}
+      to_jsonize: test
   
   goodbye_party:
     runs-on: ubuntu-latest
