@@ -8,8 +8,6 @@ jobs:
     - run: echo "welcome to world of callable workflows"
 
   call_the_workflow:
-    runs-on: ubuntu-latest
-    needs: welcome_party
     uses: korea-dinos/ajaykn-public/.github/workflows/callable1.yml@main
   
   goodbye_party:
