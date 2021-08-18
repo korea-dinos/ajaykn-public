@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       flag:
-        description: 'flag'
+        description: 'fail'
         required: true
         default: '1'
 
