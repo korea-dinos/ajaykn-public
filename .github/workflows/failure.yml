@@ -17,9 +17,9 @@ jobs:
         uses: actions/checkout@v2
 #       - name: echo inputs
 #         run: echo ${{ github.event.inputs.flag }}
-#       - name: Failed step
-#         shell: bash
-#         run: exit ${{ github.event.inputs.flag }}
+      - name: Failed step
+        shell: bash
+        run: exit ${{ github.event.inputs.flag }}
 #       - name: Log when faliure
 #         if: failure()
 #         run: echo "I'll be executed"
