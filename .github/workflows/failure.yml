@@ -1,6 +1,11 @@
 name: Failure Test
 on:
   workflow_dispatch:
+    inputs:
+      name:
+        description: 'flag'
+        required: true
+        default: '1'
 
 jobs:
   success-job:
@@ -13,11 +18,11 @@ jobs:
  
       - name: Failed step
         shell: bash
-        run: exit 1
+        run: exit ${{ flag }}
       - name: Log when faliure
         if: failure()
         run: echo "I'll be executed"
-      - name: external action
+      - name: Call external action when failure
         uses: actions/github-script@v4
         with:
           script: console.log("I run");
