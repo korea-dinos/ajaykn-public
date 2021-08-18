@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-#       - name: Checkout
-#         uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: echo inputs
         run: echo ${{ github.event.inputs.flag }}
       - name: Failed step
@@ -40,5 +40,8 @@ jobs:
         uses: ./.github/actions/composite1  
       - name: Call Composite always
         if: ${{ always() }}
+        uses: ./.github/actions/composite1 
+      - name: Call Composite when success
+        if: ${{ success() }}
         uses: ./.github/actions/composite1 
     
