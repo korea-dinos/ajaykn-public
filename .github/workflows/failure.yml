@@ -18,7 +18,6 @@ jobs:
       - name: echo inouts
         if: failure()
         run: echo ${{ github.event.inputs.flag }}
-      - name: Call external action when failure
       - name: Failed step
         shell: bash
         run: exit ${{ github.event.inputs.flag }}
