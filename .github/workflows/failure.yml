@@ -2,7 +2,7 @@ name: Failure Test
 on:
   workflow_dispatch:
     inputs:
-      name:
+      flag:
         description: 'flag'
         required: true
         default: '1'
