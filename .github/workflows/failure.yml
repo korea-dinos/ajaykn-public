@@ -1,0 +1,30 @@
+name: Failure Test
+on:
+  workflow_dispatch:
+
+jobs:
+  success-job:
+    name: Job will succeeed
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+ 
+      - name: Failed step
+        shell: bash
+        run: exit 1
+      - name: Log when faliure
+        if: failure()
+        run: echo "I'll be executed"
+      - name: external action
+        uses: actions/github-script@v4
+        with:
+          script: console.log("I run");
+        if: failure()
+      - name: Log always
+        if: always()
+        run: echo "Log always"
+      - name: Log normal
+        run: echo "Log normal"
+      
