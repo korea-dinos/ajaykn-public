@@ -15,8 +15,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: echo inouts
-        if: failure()
+      - name: echo inputs
         run: echo ${{ github.event.inputs.flag }}
       - name: Failed step
         shell: bash
