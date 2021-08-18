@@ -15,33 +15,33 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: echo inputs
-        run: echo ${{ github.event.inputs.flag }}
-      - name: Failed step
-        shell: bash
-        run: exit ${{ github.event.inputs.flag }}
-      - name: Log when faliure
-        if: failure()
-        run: echo "I'll be executed"
-      - name: Call external action when failure
-        uses: actions/github-script@v4
-        with:
-          script: console.log("I run");
-        if: failure()
-      - name: Log always
-        if: always()
-        run: echo "Log always"
-      - name: Log normal
-        run: echo "Log normal"
-      - name: Call Composite when failure
-        if: failure()
-        uses: ./.github/actions/composite1
-      - name: Call Composite when normal
-        uses: ./.github/actions/composite1  
+#       - name: echo inputs
+#         run: echo ${{ github.event.inputs.flag }}
+#       - name: Failed step
+#         shell: bash
+#         run: exit ${{ github.event.inputs.flag }}
+#       - name: Log when faliure
+#         if: failure()
+#         run: echo "I'll be executed"
+#       - name: Call external action when failure
+#         uses: actions/github-script@v4
+#         with:
+#           script: console.log("I run");
+#         if: failure()
+#       - name: Log always
+#         if: always()
+#         run: echo "Log always"
+#       - name: Log normal
+#         run: echo "Log normal"
+#       - name: Call Composite when failure
+#         if: failure()
+#         uses: ./.github/actions/composite1
+#       - name: Call Composite when normal
+#         uses: ./.github/actions/composite1  
       - name: Call Composite always
         if: ${{ always() }}
         uses: ./.github/actions/composite1 
-      - name: Call Composite when success
-        if: ${{ success() }}
-        uses: ./.github/actions/composite1 
+#       - name: Call Composite when success
+#         if: ${{ success() }}
+#         uses: ./.github/actions/composite1 
     
