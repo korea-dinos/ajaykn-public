@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+#       - name: Checkout
+#         uses: actions/checkout@v2
       - name: echo inputs
         run: echo ${{ github.event.inputs.flag }}
       - name: Failed step
