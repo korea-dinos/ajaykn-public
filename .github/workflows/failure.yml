@@ -38,4 +38,7 @@ jobs:
         uses: ./.github/actions/composite1
       - name: Call Composite when normal
         uses: ./.github/actions/composite1  
+      - name: Call Composite always
+        if: ${{ always() }}
+        uses: ./.github/actions/composite1 
     
