@@ -18,7 +18,7 @@ jobs:
  
       - name: Failed step
         shell: bash
-        run: exit ${{ flag }}
+        run: exit ${{ github.event.inputs.flag }}
       - name: Log when faliure
         if: failure()
         run: echo "I'll be executed"
