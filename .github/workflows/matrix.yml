@@ -8,14 +8,14 @@ env:
   name: abc
 jobs:
   build:
-    name: test build ${{ env.name }}
+    name: test build
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
     runs-on: ${{ matrix.os }}
     steps:
       # Runs a single command using the runners shell
-      - name: Run a one-line script
+      - name: Run a one-line script ${{ env.name }}
         run: echo Hello, world!
   test:
     strategy:
