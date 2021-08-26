@@ -4,9 +4,11 @@ name: Matrix
 
 on:
   workflow_dispatch:
-
+env:
+  name: abc
 jobs:
   build:
+    name: test build ${{ env.name }}
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
