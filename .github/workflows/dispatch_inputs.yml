@@ -8,6 +8,8 @@ on:
         default: 'warning'
       tags:
         description: 'Test scenario tags'
+      flag:
+        description: 'flag: true|false'
 jobs:
   printInputs:
     runs-on: ubuntu-latest
@@ -15,3 +17,4 @@ jobs:
     - run: |
         echo "Log level: ${{ github.event.inputs.logLevel }}"
         echo "Tags: ${{ github.event.inputs.tags }}" 
+        echo "Flag: ${{ github.event.inputs.flag }}"
