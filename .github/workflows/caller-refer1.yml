@@ -39,7 +39,7 @@ on:
         default: ${{ github.ref }}
     secrets:
       my-sec-1:
-        required: true
+        required: false
 
 env:
   wf-env-k1: ${{ inputs.key1 }}
