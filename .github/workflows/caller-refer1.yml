@@ -55,55 +55,55 @@ jobs:
           INPUT2: ${{ inputs.key2 }}
         run: echo Hello, world ${{ env.INPUT1 }}, ${{ env.INPUT2 }}, ${{ inputs.key1 }}, ${{ inputs.key2 }}, ${{ inputs.imagge }}, ${{ inputs.environment }}, ${{ inputs.shell }}.. bye..!
 
-  ref-job2:
-    runs-on: ubuntu-latest
-    environment:
-      name: ${{ inputs.environment }}
-      url: https://${{ inputs.environment }}.com
-    container:
-      image: ${{ inputs.image }}
-      env:
-        NODE_ENV: development
-      ports:
-        - 80
-      volumes:
-        - my_docker_volume:/volume_mount
-      options: --cpus 1
-    steps:
-      - name: Run script on default shell
-        run: echo Hello, world ${{ env.INPUT1 }}, ${{ env.INPUT2 }}, ${{ inputs.key1 }}, ${{ inputs.key2 }} defaults- ${{ inputs.default1 }}, ${{ inputs.default2 }}, ${{ inputs.default3 }}.. bye..!
-      - name: Use secrets
-        run : |
-          echo Hello, world 
-          echo ${{ secrets.my-sec-1 }} | rev
-          echo bye
+#   ref-job2:
+#     runs-on: ubuntu-latest
+#     environment:
+#       name: ${{ inputs.environment }}
+#       url: https://${{ inputs.environment }}.com
+#     container:
+#       image: ${{ inputs.image }}
+#       env:
+#         NODE_ENV: development
+#       ports:
+#         - 80
+#       volumes:
+#         - my_docker_volume:/volume_mount
+#       options: --cpus 1
+#     steps:
+#       - name: Run script on default shell
+#         run: echo Hello, world ${{ env.INPUT1 }}, ${{ env.INPUT2 }}, ${{ inputs.key1 }}, ${{ inputs.key2 }} defaults- ${{ inputs.default1 }}, ${{ inputs.default2 }}, ${{ inputs.default3 }}.. bye..!
+#       - name: Use secrets
+#         run : |
+#           echo Hello, world 
+#           echo ${{ secrets.my-sec-1 }} | rev
+#           echo bye
         
-  ref-job3:
-    runs-on: ubuntu-latest
-    environment: callable
-    defaults:
-      run:
-        shell: pwsh
-    steps:
-      - name: Run script on default shell
-        shell: bash
-        if: inputs.shell == 'bash'
-        run: echo Hello, world ${{ env.INPUT1 }}, ${{ env.INPUT2 }}, ${{ inputs.key1 }}, ${{ inputs.key2 }} .. bye..!
-      - name: Run script on pwsh
-        if: inputs.shell == 'pwsh'
-        run: echo Hello, world.. ${{ inputs.key1 }}, ${{ inputs.key2 }} .. bye..!
+#   ref-job3:
+#     runs-on: ubuntu-latest
+#     environment: callable
+#     defaults:
+#       run:
+#         shell: pwsh
+#     steps:
+#       - name: Run script on default shell
+#         shell: bash
+#         if: inputs.shell == 'bash'
+#         run: echo Hello, world ${{ env.INPUT1 }}, ${{ env.INPUT2 }}, ${{ inputs.key1 }}, ${{ inputs.key2 }} .. bye..!
+#       - name: Run script on pwsh
+#         if: inputs.shell == 'pwsh'
+#         run: echo Hello, world.. ${{ inputs.key1 }}, ${{ inputs.key2 }} .. bye..!
             
-  ref-job4:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        role: ["${{ inputs.key1 }}", v1, v2]
-    steps:
-      - name: Run a one-line script ${{ matrix.role }}
-        env:
-          INPUT1: ${{ inputs.key1 }}
-          INPUT2: ${{ inputs.key2 }}
-          FLAG: true
+#   ref-job4:
+#     runs-on: ubuntu-latest
+#     strategy:
+#       matrix:
+#         role: ["${{ inputs.key1 }}", v1, v2]
+#     steps:
+#       - name: Run a one-line script ${{ matrix.role }}
+#         env:
+#           INPUT1: ${{ inputs.key1 }}
+#           INPUT2: ${{ inputs.key2 }}
+#           FLAG: true
         run: echo Hello,.. world ${{ env.INPUT1 }}, ${{ env.INPUT2 }}, ${{ inputs.key1 }}, ${{ inputs.key2 }}, ${{ env.FLAG }}, ${{ env.wf-env-k1 }} .. bye..!
 
 #   ref-job5:
