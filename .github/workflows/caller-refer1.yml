@@ -45,7 +45,7 @@ env:
   wf-env-k1: ${{ inputs.key1 }}
   
 jobs:
-  ref-job1:
+  ref-job1: a
     runs-on: ubuntu-latest
 #     if: ${{ inputs.key1 == 'key1' }}
     steps:
