@@ -8,7 +8,7 @@ env:
   name: abc
 jobs:
   build:
-    name: test build
+    name: build
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
