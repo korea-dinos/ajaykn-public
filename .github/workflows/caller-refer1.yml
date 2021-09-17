@@ -10,7 +10,7 @@ on:
   workflow_call:
     inputs:
       key1:
-        required: true
+        required: false
         type: string
         default: default1
       key2:
