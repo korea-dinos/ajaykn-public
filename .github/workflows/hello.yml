@@ -9,6 +9,11 @@ on:
 #     - cron:  "5 * * * *"
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      ring:
+        description: 'ring to build'
+        required: false
+        default: '1'
   pull_request:
 
 
@@ -16,7 +21,7 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
-    if: ${{ github.sha == 'test' }}
+    if: ${{ github.sha == 'Mon' }}
     env:
       RING: 1
     # The type of runner that the job will run on
@@ -24,7 +29,7 @@ jobs:
 #     strategy:
 #       matrix:
 #         rings: [1, 2]
-    name: build-ring-${{ env.RING }}
+    name: build-ring-${{ github.event.inputs.RING || '1' }}
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
