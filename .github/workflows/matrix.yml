@@ -25,6 +25,7 @@ jobs:
         os: [ubuntu-latest, macos-latest, windows-latest]
         id: [1,2,3]
     runs-on: ${{ matrix.os }}
+    name: ${{ github.sha }}
     steps:
       # Runs a single command using the runners shell
       - name: Run a one-line script-${{ matrix.id }}
