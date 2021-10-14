@@ -15,7 +15,7 @@ on:
         required: false
         default: '1'
   pull_request:
-    types: [merged]
+    types: [closed, merged]
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -55,6 +55,7 @@ jobs:
       - name: Run a one-line script
         run: |
           echo Hello, world!
+          echo ${{ github.event }}
 #          exit 1
 
       # Runs a set of commands using the runners shell
