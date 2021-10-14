@@ -49,6 +49,7 @@ jobs:
     runs-on: ubuntu-latest
 #     if: ${{ inputs.key1 == 'key1' }}
     steps:
+      - uses: actions/checkout@v2
       - name: Run a one-line script
         env:
           INPUT1: ${{ inputs.key1 }}
