@@ -1,7 +1,7 @@
 # This is a basic workflow to help you get started with Actions
 
 name: ReferInputs
-concurrency: staging_environmen
+# concurrency: staging_environmen
 
 # Controls when the workflow will run
 on:
