@@ -55,7 +55,11 @@ jobs:
         env:
           INPUT1: ${{ inputs.key1 }}
           INPUT2: ${{ inputs.key2 }}
-        run: echo Hello, world ${{ env.INPUT1 }}, ${{ env.INPUT2 }}, ${{ inputs.key1 }}, ${{ inputs.key2 }}, ${{ inputs.imagge }}, ${{ inputs.environment }}, ${{ inputs.shell }}.. bye..!
+        run: |
+          echo Hello, world ${{ env.INPUT1 }}, ${{ env.INPUT2 }}, ${{ inputs.key1 }}, ${{ inputs.key2 }}, ${{ inputs.imagge }}, ${{ inputs.environment }}, ${{ inputs.shell }}.. bye..!
+          echo sleeping
+          sleep 20
+          echo slept
 
 #   ref-job2:
 #     runs-on: ubuntu-latest
