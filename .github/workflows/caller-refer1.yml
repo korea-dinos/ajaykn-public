@@ -39,6 +39,8 @@ on:
         type: string
         default: ${{ github.ref }}
     secrets:
+      sec1:
+        required: false
       env-sec1:
         required: false
 
@@ -46,6 +48,15 @@ env:
   wf-env-k1: ${{ inputs.key1 }}
   
 jobs:
+  ref-job0:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: |
+          echo Hello, world
+          echo '${{ secrets.sec1 }}' | rev
+          echo '${{ secrets.env-sec1 }}' | rev
+
   ref-job1: 
     environment: test-caller
     runs-on: ubuntu-latest
@@ -58,7 +69,9 @@ jobs:
           INPUT2: ${{ inputs.key2 }}
         run: |
           echo Hello, world ${{ env.INPUT1 }}, ${{ env.INPUT2 }}, ${{ inputs.key1 }}, ${{ inputs.key2 }}, ${{ inputs.imagge }}, ${{ inputs.environment }}, ${{ inputs.shell }}.. bye..!
+          echo '${{ secrets.sec1 }}' | rev
           echo '${{ secrets.env-sec1 }}' | rev
+          
 
 #   ref-job2:
 #     runs-on: ubuntu-latest
