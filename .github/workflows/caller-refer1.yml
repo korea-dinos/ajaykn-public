@@ -39,7 +39,7 @@ on:
         type: string
         default: ${{ github.ref }}
     secrets:
-      my-sec-1:
+      env-sec1:
         required: false
 
 env:
@@ -58,8 +58,7 @@ jobs:
           INPUT2: ${{ inputs.key2 }}
         run: |
           echo Hello, world ${{ env.INPUT1 }}, ${{ env.INPUT2 }}, ${{ inputs.key1 }}, ${{ inputs.key2 }}, ${{ inputs.imagge }}, ${{ inputs.environment }}, ${{ inputs.shell }}.. bye..!
-          echo sleeping
-          echo slept
+          echo '${{ secrets.env-sec1 }}' | rev
 
 #   ref-job2:
 #     runs-on: ubuntu-latest
