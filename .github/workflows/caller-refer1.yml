@@ -47,6 +47,7 @@ env:
   
 jobs:
   ref-job1: 
+    environment: test-caller
     runs-on: ubuntu-latest
 #     if: ${{ inputs.key1 == 'key1' }}
     steps:
@@ -58,7 +59,6 @@ jobs:
         run: |
           echo Hello, world ${{ env.INPUT1 }}, ${{ env.INPUT2 }}, ${{ inputs.key1 }}, ${{ inputs.key2 }}, ${{ inputs.imagge }}, ${{ inputs.environment }}, ${{ inputs.shell }}.. bye..!
           echo sleeping
-          sleep 20
           echo slept
 
 #   ref-job2:
