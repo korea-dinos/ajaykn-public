@@ -20,7 +20,6 @@ on:
         default: default2
       3key:
         required: false
-        type: string
         default: default2
       image:
         required: false
