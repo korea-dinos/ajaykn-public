@@ -18,6 +18,10 @@ on:
         required: false
         type: string
         default: default2
+      3key2:
+        required: false
+        type: string
+        default: default2
       image:
         required: false
         type: string
