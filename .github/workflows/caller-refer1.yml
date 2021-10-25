@@ -19,6 +19,7 @@ on:
         type: string
         default: default2
       3key:
+        type: string
         required: false
         default: default2
       image:
