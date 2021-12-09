@@ -70,6 +70,7 @@ jobs:
 #           echo "${{ env.action_state }}" # This will output 'yellow'
 
   test:
+    continue-on-error: 'true'
     runs-on: ubuntu-latest
     steps:
       - run: echo "hi"
