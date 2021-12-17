@@ -16,6 +16,9 @@ concurrency:
 jobs:
   # This workflow contains a single job called "build"
   build:
+    strategy:
+      matrix:
+        run: [1, 2]
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
