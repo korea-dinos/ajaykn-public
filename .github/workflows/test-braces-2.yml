@@ -4,7 +4,7 @@ name: "Test braces 2"
 on:
   workflow_run:
     workflows:
-      - "[Test] braces"
+      - "\[Test\] braces"
     branches:
       - main
     types:
