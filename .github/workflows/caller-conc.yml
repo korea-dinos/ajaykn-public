@@ -14,4 +14,4 @@ jobs:
   # This workflow contains a single job called "build"
   ref:
     concurrency: job-conc
-    uses: korea-dinos/ajaykn-pubilc/.github/workflows/called-conc.yml@main
+    uses: korea-dinos/ajaykn-public/.github/workflows/called-conc.yml@main
