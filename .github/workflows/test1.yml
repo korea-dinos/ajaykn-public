@@ -1,0 +1,11 @@
+# This is a basic workflow to help you get started with Actions
+
+
+# Controls when the workflow will run
+name: "[Test] braces"
+on:
+  push:
+    branches:
+      - "main"
+    paths:
+      - cloud/**
