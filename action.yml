@@ -5,7 +5,7 @@ runs:
   using: "composite"
   steps:
     - uses: korea-dinos/ajaykn-public-1/.github/actions/composite@main
-    - uses: korea-dinos/ajaykn-public@main
+#     - uses: korea-dinos/ajaykn-public@main
     - name: Print messages
       shell: bash
       run: |
