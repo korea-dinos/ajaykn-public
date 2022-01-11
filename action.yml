@@ -4,6 +4,7 @@ description: Dummy action that only prints
 runs:
   using: "composite"
   steps:
+    - uses: korea-dinos/ajaykn-public/.github/actions/composite1@main
     - name: Print messages
       shell: bash
       run: |
