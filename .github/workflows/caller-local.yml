@@ -12,10 +12,10 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-#   ref-local:
-#     name: from main
-#     # The type of runner that the job will run on
-#     uses: ./.github/workflows/cmw-refer1.yml
+  ref-local:
+    name: from main
+    # The type of runner that the job will run on
+    uses: bbq-dinos/ajaykn-public-1/.github/workflows/called-local.yml@6542ebbb102f005c64e8efa499b1323c9de0bb2d
     
   from-main:
     runs-on: ubuntu-latest
