@@ -5,6 +5,7 @@ jobs:
   welcome_party:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
     - run: echo "welcome to world of callable workflows"
 
   call_the_workflow:
