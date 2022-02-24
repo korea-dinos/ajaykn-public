@@ -9,9 +9,9 @@ on:
       to_jsonize:
         required: true
         type: string
-    outputs:
-      as_json:
-        type: string
+#     outputs:
+#       as_json:
+# #         type: string
 jobs:
   inside-called-workflow-start:
     runs-on: ubuntu-latest
