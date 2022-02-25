@@ -2,22 +2,22 @@ name: Caller JSONize
 on: workflow_dispatch
 
 jobs:
-  welcome_party:
+  allow-actions:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+#     - uses: actions/checkout@v2
     - uses: docker/login-action@v1
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - uses: docker/hacky-action@v1
-    - run: echo "welcome to world of callable workflows"
+#     - run: echo "welcome to world of callable workflows"
 
-  call_the_workflow:
-    uses: korea-dinos/ajaykn-public/.github/workflows/callable1.yml@main
+#   call_the_workflow:
+#     uses: korea-dinos/ajaykn-public/.github/workflows/callable1.yml@main
   
-  goodbye_party:
-    runs-on: ubuntu-latest
-    needs: call_the_workflow
-    steps:
-    - run: echo "and we're done!"
+#   goodbye_party:
+#     runs-on: ubuntu-latest
+#     needs: call_the_workflow
+#     steps:
+#     - run: echo "and we're done!"
