@@ -1,0 +1,17 @@
+name: JSONize
+on:
+  workflow_dispatch:
+    inputs:
+      to_jsonize:
+        required: false
+  workflow_call:
+    inputs:
+      to_jsonize:
+        required: false
+        type: string
+        
+jobs:
+  inside-called-workflow-end:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "done!"
