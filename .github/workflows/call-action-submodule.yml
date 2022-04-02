@@ -25,8 +25,12 @@ jobs:
   call-action-via-submodule:
     runs-on: ubuntu-latest
     steps:
+      - id: check1
+        if : always()
+        run: |
+          pwd && ls -R
       - uses: korea-dinos/ajaykn-submodule/vendor-actions/ajaykn-public-action@main
-      - id: check
+      - id: check1
         if : always()
         run: |
           pwd && ls -R
