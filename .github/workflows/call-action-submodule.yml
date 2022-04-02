@@ -36,4 +36,4 @@ jobs:
           submodules: true
       - run: |
           pwd && ls -R
-      - uses: ./korea-dinos/ajaykn-submodule/vendor-actions/ajaykn-public-action
+      - uses: ./vendor-actions/ajaykn-public-action
