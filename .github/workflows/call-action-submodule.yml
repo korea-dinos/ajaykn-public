@@ -32,6 +32,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          repository: korea-dinos/ajaykn-action-submodule/
+          repository: korea-dinos/ajaykn-action-submodule
           submodules: true
       - uses: ./korea-dinos/ajaykn-action-submodule/vendor-actions/ajaykn-public-action
