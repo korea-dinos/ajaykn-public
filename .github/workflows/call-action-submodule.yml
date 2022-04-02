@@ -26,6 +26,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: korea-dinos/ajaykn-submodule/test-action@main
+      - run: |
+          pwd && ls -R
     
   call-action-via-submodule:
     runs-on: ubuntu-latest
