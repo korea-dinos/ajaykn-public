@@ -25,4 +25,4 @@ jobs:
   call-action-via-submodule:
     runs-on: ubuntu-latest
     steps:
-      - uses: korea-dinos/ajaykn-action-submodule/vendor-actions/ajaykn-public-action@549273520e7a4b827e21029914be68adbef1f259
+      - uses: korea-dinos/ajaykn-action-submodule/vendor-actions/ajaykn-public-action@main
