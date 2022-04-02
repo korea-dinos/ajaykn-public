@@ -33,5 +33,5 @@ jobs:
       - uses: actions/checkout@v3
         with:
           repository: korea-dinos/ajaykn-submodule
-#           submodules: true
+          submodules: true
       - uses: ./korea-dinos/ajaykn-submodule/vendor-actions/ajaykn-public-action
