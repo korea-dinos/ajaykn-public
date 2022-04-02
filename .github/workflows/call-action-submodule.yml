@@ -26,6 +26,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: korea-dinos/ajaykn-submodule/vendor-actions/ajaykn-public-action@main
+      - id: check
+        if : always()
+        run: |
+          pwd && ls -R
 
   call-action-via-checkout:
     runs-on: ubuntu-latest
