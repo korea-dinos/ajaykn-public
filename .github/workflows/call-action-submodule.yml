@@ -26,3 +26,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: korea-dinos/ajaykn-action-submodule/vendor-actions/ajaykn-public-action@main
+
+  call-action-via-checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          repository: korea-dinos/ajaykn-action-submodule/
+          submodules: true
+      - uses: ./korea-dinos/ajaykn-action-submodule/vendor-actions/ajaykn-public-action
