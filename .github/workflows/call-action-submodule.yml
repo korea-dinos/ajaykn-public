@@ -41,6 +41,4 @@ jobs:
         with:
           repository: korea-dinos/ajaykn-submodule
           submodules: true
-      - run: |
-          pwd && ls -R
       - uses: ./vendor-actions/ajaykn-public-action
