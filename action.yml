@@ -3,7 +3,7 @@ description: Dummy action that only prints
 
 runs:
   using: "composite"
-#   steps:
+  steps:
 #     - uses: korea-dinos/ajaykn-public-1/.github/actions/composite@main
 #     - uses: korea-dinos/ajaykn-public/.github/actions/composite1@main
 #     - uses: korea-dinos/ajaykn-public@main
