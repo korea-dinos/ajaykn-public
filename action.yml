@@ -11,7 +11,5 @@ runs:
       shell: bash
       run: |
         set -x
-        echo "dummy message 1"
-        echo "dummy message 2"
-        echo "dummy message 3"
-        echo "dummy message 4"
+        echo "dummy message from branch v2"
+       
