@@ -4,14 +4,11 @@ description: Dummy action that only prints
 runs:
   using: "composite"
   steps:
-    - uses: korea-dinos/ajaykn-public-1/.github/actions/composite@main
-    - uses: korea-dinos/ajaykn-public/.github/actions/composite1@main
+#     - uses: korea-dinos/ajaykn-public-1/.github/actions/composite@main
+#     - uses: korea-dinos/ajaykn-public/.github/actions/composite1@main
 #     - uses: korea-dinos/ajaykn-public@main
     - name: Print messages
       shell: bash
       run: |
         set -x
-        echo "dummy message 1"
-        echo "dummy message 2"
-        echo "dummy message 3"
-        echo "dummy message 4"
+        echo "dummy message from v4 tag
