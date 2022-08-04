@@ -1,5 +1,6 @@
 name: Composite Action
-description: Dummy action that only prints ${{ github.ref }}
+# description: Dummy action that only prints ${{ github.ref }}
+description: Dummy action that only prints 
 
 runs:
   using: "composite"
