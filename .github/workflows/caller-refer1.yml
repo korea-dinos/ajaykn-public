@@ -58,7 +58,7 @@ jobs:
     steps:
       - name: Run a one-line script
         run: |
-          echo Hello, world - rerun
+          echo Hello, world - rerun - partial ?
           echo '${{ secrets.sec1 }}' | rev
           echo '${{ secrets.env-sec1 }}' | rev
 
