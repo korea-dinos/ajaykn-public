@@ -12,4 +12,4 @@ runs:
       shell: bash
       run: |
         set -x
-        echo "dummy message v15.0.0 tag"
+        echo "dummy message v16.0.0 tag"
