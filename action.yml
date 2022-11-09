@@ -7,6 +7,7 @@ runs:
   steps:
 #     - uses: korea-dinos/ajaykn-public-1/.github/actions/composite@main
 #     - uses: korea-dinos/ajaykn-public/test-action1@main
+    - uses: actions/checkout@v3
     - uses: ./test-action1
 #     - uses: korea-dinos/ajaykn-public@main
     - name: Print messages
