@@ -25,6 +25,7 @@ runs:
         cd ${{ github.action_path }}
         ls
         echo $GITHUB_PATH
+        cat $GITHUB_PATH
     
       shell: bash
     - run: |
