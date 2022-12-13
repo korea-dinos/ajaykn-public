@@ -19,7 +19,11 @@ runs:
         echo ${{ github.action_path }}
         echo "random-number=$(echo $RANDOM)" >> $GITHUB_OUTPUT
       shell: bash
-    - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
+    - run: |
+        echo "${{ github.action_path }}" >> $GITHUB_PATH
+        cd ${{ github.action_path }}
+        ls
+    
       shell: bash
 #     - run: cat ./test.txt
 #       shell: bash
