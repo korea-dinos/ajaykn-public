@@ -1,24 +1,19 @@
-
-name: Caller local
+name: called local
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
 #   push:
-  pull_request:
+#   pull_request:
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  workflow_call:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  ref-local:
-    name: from main
-    # The type of runner that the job will run on
-    uses: bbq-dinos/ajaykn-public-1/.github/workflows/called-local.yml@6542ebbb102f005c64e8efa499b1323c9de0bb2d
     
-  from-main:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Run a one-line script
-        run: echo Hello, world from fork PR
+        run: echo Hello, world
