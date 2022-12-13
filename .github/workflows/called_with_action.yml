@@ -24,7 +24,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
 #       - uses: actions/checkout@v3
       
-      - uses: korea-dinos/ajaykn-public/called_with_action@main
+      - uses: korea-dinos/ajaykn-public/my-hello-world@main
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
