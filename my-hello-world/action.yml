@@ -31,5 +31,5 @@ runs:
     - run: |
         echo $GITHUB_PATH
         pwd
-       goodbye.sh
+        goodbye.sh
       shell: bash
