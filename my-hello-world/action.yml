@@ -25,5 +25,5 @@ runs:
         ls
     
       shell: bash
-#     - run: cat ./test.txt
-#       shell: bash
+    - run: pwd
+      shell: bash
