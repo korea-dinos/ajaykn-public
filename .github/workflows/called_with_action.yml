@@ -29,6 +29,10 @@ jobs:
       
       - uses: korea-dinos/ajaykn-public/my-hello-world@main
 
+      - run: |
+          echo ${{ github.workflow_ref }}
+          echo "${{ toJSON(github) }}"
+      
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
