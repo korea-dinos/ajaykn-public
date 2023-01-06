@@ -32,6 +32,7 @@ jobs:
       - uses: korea-dinos/ajaykn-public/my-hello-world@main
 
       - run: |
+          echo ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
           echo ${{ github.workflow_ref }}
           echo ${{ github.event.pull_request.number }}
           echo "${{ toJSON(github) }}"
