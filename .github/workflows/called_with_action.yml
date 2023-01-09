@@ -14,6 +14,9 @@ on:
     inputs:
       runner-label:
         type: string
+    secrets:
+      test1:
+        required: true
 # concurrency:
 #   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
 #   cancel-in-progress: true
@@ -32,6 +35,7 @@ jobs:
       - uses: korea-dinos/ajaykn-public/my-hello-world@main
 
       - run: |
+          echo ${{ secrets.test1 }}..
           echo ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
           echo ${{ github.workflow_ref }}
           echo ${{ github.event.pull_request.number }}
