@@ -14,9 +14,9 @@ on:
     inputs:
       runner-label:
         type: string
-    secrets:
-      test1:
-        required: false
+#     secrets:
+#       test1:
+#         required: false
 # concurrency:
 #   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
 #   cancel-in-progress: true
