@@ -35,7 +35,7 @@ jobs:
       - uses: korea-dinos/ajaykn-public/my-hello-world@main
 
       - run: |
-          echo ${{ secrets.test1 }} | rev..
+          echo ..${{ secrets.test1 }} | rev
           echo ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
           echo ${{ github.workflow_ref }}
           echo ${{ github.event.pull_request.number }}
