@@ -15,7 +15,7 @@ on:
       runner-label:
         type: string
     secrets:
-      test2:
+      test12:
         required: true
 # concurrency:
 #   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
