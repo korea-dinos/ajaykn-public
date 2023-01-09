@@ -16,7 +16,7 @@ on:
         type: string
     secrets:
       test2:
-        required: false
+        required: true
 # concurrency:
 #   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
 #   cancel-in-progress: true
