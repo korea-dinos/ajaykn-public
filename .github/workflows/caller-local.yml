@@ -9,16 +9,20 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+env:
+  test: val
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-#   ref-local:
-#     name: from main
-#     # The type of runner that the job will run on
-#     uses: ./.github/workflows/cmw-refer1.yml
+  ref-local:
+    name: from main
+    # The type of runner that the job will run on
+    uses: ./.github/workflows/cmw-refer1.yml
+    secrets:
+      test1: ${{ env.test }}
     
-  from-main:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run a one-line script
-        run: echo Hello, world
+#   from-main:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Run a one-line script
+#         run: echo Hello, world
