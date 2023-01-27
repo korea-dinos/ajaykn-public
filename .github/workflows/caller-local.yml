@@ -8,6 +8,10 @@ on:
   pull_request:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      num1:
+        type: number
+        default: "12.3015e+05"
 
 env:
   test: val
@@ -18,8 +22,11 @@ jobs:
     name: from main
     # The type of runner that the job will run on
     uses: ./.github/workflows/caller-refer1.yml
-    secrets:
-      sec1: ${{ env.test }}
+    with:
+      num1: ${{ fromJSON(inputs.num1) }}
+#     secrets:
+#       sec1: ${{ env.test }}
+      
     
 #   from-main:
 #     runs-on: ubuntu-latest
