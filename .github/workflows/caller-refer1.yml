@@ -12,8 +12,8 @@ on:
     inputs:
       key1:
         required: false
-        type: string
-        default: default1
+        type: number
+#         default: default1
       key2:
         required: false
         type: number
@@ -48,8 +48,8 @@ on:
       env-sec1:
         required: false
 
-env:
-  wf-env-k1: ${{ inputs.key1 }}
+# env:
+#   wf-env-k1: ${{ inputs.key1 }}
   
 jobs:
   ref-job0:
@@ -58,6 +58,9 @@ jobs:
     steps:
       - name: Run a one-line script
         run: |
+          echo ${{ inputs.key1 }}
+          echo ${{ inputs.num1 }}
+          echo ${{ inputs.key2 }}
           echo Hello, world - rerun - partial ? - 2
           echo '${{ secrets.sec1 }}' | rev
           echo '${{ secrets.env-sec1 }}' | rev
