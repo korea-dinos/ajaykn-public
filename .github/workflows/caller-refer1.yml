@@ -18,6 +18,10 @@ on:
         required: false
         type: number
         default: 12.3015e+05
+      key3:
+        required: false
+        type: number
+        default: -12.334
 #       3key:
 #         type: string
 #         required: false
