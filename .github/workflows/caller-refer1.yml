@@ -16,32 +16,32 @@ on:
         default: default1
       key2:
         required: false
-        type: string
-        default: default2
-      3key:
-        type: string
-        required: false
-        default: default2
-      image:
-        required: false
-        type: string
-        default: node:14.16   
-      environment:
-        required: false
-        type: string
-        default: test-environment
-      shell:
-        required: false
-        type: string
-        default: pwsh
-      default1:
-        type: boolean
-      default2:
-        type: string
-        default: test-default
-      default3:
-        type: string
-        default: ${{ github.ref }}
+        type: number
+        default: 12.3015e+05
+#       3key:
+#         type: string
+#         required: false
+#         default: default2
+#       image:
+#         required: false
+#         type: string
+#         default: node:14.16   
+#       environment:
+#         required: false
+#         type: string
+#         default: test-environment
+#       shell:
+#         required: false
+#         type: string
+#         default: pwsh
+#       default1:
+#         type: boolean
+#       default2:
+#         type: string
+#         default: test-default
+#       default3:
+#         type: string
+#         default: ${{ github.ref }}
     secrets:
       sec1:
         required: false
