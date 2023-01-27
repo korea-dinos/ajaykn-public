@@ -65,6 +65,7 @@ jobs:
           echo ${{ inputs.key1 }}
           echo ${{ inputs.num1 }}
           echo ${{ inputs.key2 }}
+          echo ${{ inputs.key3 }}
           echo Hello, world - rerun - partial ? - 2
           echo '${{ secrets.sec1 }}' | rev
           echo '${{ secrets.env-sec1 }}' | rev
