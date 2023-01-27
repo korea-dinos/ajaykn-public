@@ -17,9 +17,9 @@ jobs:
   ref-local:
     name: from main
     # The type of runner that the job will run on
-    uses: ./.github/workflows/cmw-refer1.yml
+    uses: ./.github/workflows/caller-refer1.yml
     secrets:
-      test1: ${{ env.test }}
+      sec1: ${{ env.test }}
     
 #   from-main:
 #     runs-on: ubuntu-latest
