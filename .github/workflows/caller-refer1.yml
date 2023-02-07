@@ -25,7 +25,7 @@ on:
       key4:
         required: false
         type: number
-        default: 012345
+        default: 0o12345
       key5:
         required: false
         type: number
