@@ -30,6 +30,9 @@ on:
         required: false
         type: number
         default: 0x12d4
+      actions_repo:
+        type: string
+        default: korea-dinos/ajaykn-public
         
 #       3key:
 #         type: string
@@ -69,6 +72,12 @@ jobs:
     environment: test
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: ${{ inputs.actions_repo }}
+      - uses: ./test-action1
+        
+        
       - name: Run a one-line script
         run: |
           echo ${{ inputs.key1 }}
