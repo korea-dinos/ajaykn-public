@@ -69,6 +69,8 @@ on:
   
 jobs:
   ref-job0:
+    permissions:
+      id-token: write
     environment: test
     runs-on: ubuntu-latest
     steps:
