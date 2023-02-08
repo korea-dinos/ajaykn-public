@@ -70,7 +70,7 @@ on:
 jobs:
   ref-job0:
     permissions:
-      id-token: write
+#       id-token: write
       packages: read
     environment: test
     runs-on: ubuntu-latest
