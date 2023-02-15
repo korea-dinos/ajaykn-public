@@ -32,20 +32,21 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
 #       - uses: actions/checkout@v3
       
-      - uses: korea-dinos/ajaykn-public/my-hello-world@main
+#       - uses: korea-dinos/ajaykn-public/my-hello-world@main
 
-      - run: |
-          echo ..${{ secrets.test1 }} | rev
-          echo ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
-          echo ${{ github.workflow_ref }}
-          echo ${{ github.event.pull_request.number }}
-          echo "${{ toJSON(github) }}"
+        - run: echo ..${{ secrets.AJAY_TEST_1 }} | rev
+#       - run: |
+#           echo ..${{ secrets.test1 }} | rev
+#           echo ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
+#           echo ${{ github.workflow_ref }}
+#           echo ${{ github.event.pull_request.number }}
+#           echo "${{ toJSON(github) }}"
       
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: |
-          echo ${{ inputs.runner-label }}
-          echo Hello, world!
-          echo $GITHUB_PATH
-          cat $GITHUB_PATH
-          goodbye.sh
+#       # Runs a single command using the runners shell
+#       - name: Run a one-line script
+#         run: |
+#           echo ${{ inputs.runner-label }}
+#           echo Hello, world!
+#           echo $GITHUB_PATH
+#           cat $GITHUB_PATH
+#           goodbye.sh
